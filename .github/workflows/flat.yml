@@ -33,7 +33,8 @@ jobs:
           from: "xml"
           to: "json"
       - name: Print result
-        run: cat mi_permit_car_park_list.json >> "${{ steps.xml2json.outputs.output }}"
+        run: | 
+          cat mi_permit_car_park_list.json >> echo "${{ steps.xml2json.outputs.output }}"
       # - name: Fetch data
       #   uses: githubocto/flat@mr/node16
       #   with:
