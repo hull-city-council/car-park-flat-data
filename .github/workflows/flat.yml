@@ -42,7 +42,7 @@ jobs:
       - name: Post process
         uses: githubocto/flat@mr/node16
         with:
-          http_url: ''
+          http_url: 'https://raw.githubusercontent.com/hull-city-council/car-park-flat-data/main/mi_permit_car_park_list.json'
           postprocess: mipermit-postprocess.js
 
       # - name: Fetch data
