@@ -35,10 +35,9 @@ jobs:
       - name: Modify mi_permit_car_park_list.json
         uses: jaywcjlove/github-action-modify-file-content@main
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           commit_message: "Updated data {{YYYY-MM-DD HH:mm:ss}}"
           path: mi_permit_car_park_list.json
-          body: ${{ steps.xml2json.outputs.output.Locations.Location }}
+          body: ${{ steps.xml2json.outputs.output }}
           overwrite: "true"
       # - name: Fetch data
       #   uses: githubocto/flat@mr/node16
