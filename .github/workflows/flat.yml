@@ -44,6 +44,7 @@ jobs:
         with:
           http_url: 'https://raw.githubusercontent.com/hull-city-council/car-park-flat-data/main/mi_permit_car_park_list.json'
           postprocess: mipermit-postprocess.js
+          downloaded_filename: mi_permit_car_park_list.json
 
       # - name: Fetch data
       #   uses: githubocto/flat@mr/node16
