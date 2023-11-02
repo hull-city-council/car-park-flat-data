@@ -25,4 +25,4 @@ jobs:
           http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
           mask: true
           downloaded_filename: mi_permit_car_park_data_310.json # The http_url gets saved and renamed in our repository
-          axios_config: ${{ secrets.MIPERMIT_310 }}
+          axios_config: 310.json
