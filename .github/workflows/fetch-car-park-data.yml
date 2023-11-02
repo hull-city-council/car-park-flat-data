@@ -2,7 +2,7 @@ name: Fetch car park data
 on:
   push:
     paths:
-      - .github/workflows/flat.yml # Only run a new workflow every time this file (flat.yaml) file changes
+      - .github/workflows/fetch-car-park-data.yml # Only run a new workflow every time this file (flat.yaml) file changes
   workflow_dispatch: # Required even though this is currently empty
   schedule:
     - cron: '*/30 * * * *' # Runs every 30 minutes
