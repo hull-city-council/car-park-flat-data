@@ -1,4 +1,4 @@
-name: Hull City Council Car Parks
+name: Hull City Council Car Parks Data
 on:
   push:
     paths:
