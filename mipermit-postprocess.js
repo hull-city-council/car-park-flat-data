@@ -17,7 +17,7 @@ console.log(json)
 
 // Step 3. Write a new JSON file with our filtered data
 const newFilename = `mi_permit_car_park_list-processed.json` // name of a new file to be saved
-await writeJSON(newFilename, filteredPlatformStatus) // create a new JSON file
+await writeJSON(newFilename, filteredCarParkList) // create a new JSON file
 console.log("Wrote a post process file")
 
 // Optionally delete the original file
