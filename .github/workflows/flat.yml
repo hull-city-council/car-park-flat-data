@@ -32,6 +32,8 @@ jobs:
           input: "mi_permit_car_park_list.xml"
           from: "xml"
           to: "json"
+      - name: Print result
+        run: echo "${{ steps.xml2json.outputs.output }}"
       # - name: Fetch data
       #   uses: githubocto/flat@mr/node16
       #   with:
