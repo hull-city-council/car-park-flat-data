@@ -32,7 +32,6 @@ jobs:
           input: "mi_permit_car_park_list.xml"
           from: "xml"
           to: "json"
-          output: "mi_permit_car_park_list.json"
       # - name: Fetch data
       #   uses: githubocto/flat@mr/node16
       #   with:
