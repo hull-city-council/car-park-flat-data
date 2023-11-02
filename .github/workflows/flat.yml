@@ -1,4 +1,4 @@
-name: Hull City Council Car Parks Data
+name: Process car park list
 on:
   push:
     paths:
@@ -40,9 +40,8 @@ jobs:
           body: ${{ steps.xml2json.outputs.output }}
           overwrite: "true"
       - name: Post process
-        uses: githubocto/flat@mr/node16
-        with:
-          postprocess: mipermit-postprocess.js
+        run: mipermit-postprocess.js
+
       # - name: Fetch data
       #   uses: githubocto/flat@mr/node16
       #   with:
