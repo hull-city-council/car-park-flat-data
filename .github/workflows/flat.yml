@@ -24,12 +24,12 @@ jobs:
         with:
           http_url: ${{ secrets.MIPERMIT_CARPARK_LIST_URL }} # List of car parks
           mask: true
-          downloaded_filename: mi_permit_car_park_list.xml # The http_url gets saved and renamed in our repository
+          downloaded_filename: mi_permit_car_park_list.json # The http_url gets saved and renamed in our repository
       - name: Convert xml to JSON
         uses: fabasoad/data-format-converter-action@main
         id: xml2json
         with:
-          input: "mi_permit_car_park_list.xml"
+          input: "mi_permit_car_park_list.json"
           from: "xml"
           to: "json"
       - name: Print result
