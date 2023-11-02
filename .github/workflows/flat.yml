@@ -32,11 +32,16 @@ jobs:
           input: "mi_permit_car_park_list.json"
           from: "xml"
           to: "json"
-      - name: Save json file
+      - name: Create json file
         shell: bash
         run: | 
           echo "${{ steps.xml2json.outputs.output }}" > mi_permit_car_park_list.json
           cat mi_permit_car_park_list.json
+      - name: Commit file
+        id: make-commit
+        run: |
+          git add mi_permit_car_park_list.json
+          git commit --message "Car park list data updated"
       # - name: Fetch data
       #   uses: githubocto/flat@mr/node16
       #   with:
