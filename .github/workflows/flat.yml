@@ -32,16 +32,14 @@ jobs:
           input: "mi_permit_car_park_list.json"
           from: "xml"
           to: "json"
-      - name: Create json file
-        shell: bash
-        run: | 
-          echo "${{ steps.xml2json.outputs.output }}" > mi_permit_car_park_list.json
-          cat mi_permit_car_park_list.json
-      - name: Commit file
-        id: make-commit
-        run: |
-          git add mi_permit_car_park_list.json
-          git commit --message "Car park list data updated"
+      - name: Modify mi_permit_car_park_list.json
+        uses: jaywcjlove/github-action-modify-file-content@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: "Updated data {{YYYY-MM-DD HH:mm:ss}}"
+          path: mi_permit_car_park_list.json
+          body: ${{ steps.xml2json.outputs.output }}
+          overwrite: "true"
       # - name: Fetch data
       #   uses: githubocto/flat@mr/node16
       #   with:
