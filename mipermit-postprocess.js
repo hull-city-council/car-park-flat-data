@@ -8,9 +8,9 @@ const json = await readJSON(filename)
 console.log(json)
 
 // Step 2: Filter specific data we want to keep and write to a new JSON file
-  const carParkArray = Object.values(data.GetLocationsReturn.Locations.Location);
+  const carParkArray = Object.values(json.GetLocationsReturn.Locations.Location);
   const filteredCarParkList = carParkArray.map(carpark => ({
-		ID: carpark.ID,
+    ID: carpark.ID,
     Code: carpark.Code,
     Name: carpark.Name
   }));
