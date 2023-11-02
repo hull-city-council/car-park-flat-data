@@ -32,9 +32,11 @@ jobs:
           input: "mi_permit_car_park_list.json"
           from: "xml"
           to: "json"
-      - name: Print result
+      - name: Save json file
+        shell: bash
         run: | 
-          cat mi_permit_car_park_list.json >> echo "${{ steps.xml2json.outputs.output }}"
+          echo "${{ steps.xml2json.outputs.output }}" > mi_permit_car_park_list.json
+          cat mi_permit_car_park_list.json
       # - name: Fetch data
       #   uses: githubocto/flat@mr/node16
       #   with:
