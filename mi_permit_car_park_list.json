@@ -1,0 +1,72 @@
+{
+  "+p_xml": "version=\"1.0\" encoding=\"utf-8\"",
+  "GetLocationsReturn": {
+    "+@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "+@xmlns:xsd": "http://www.w3.org/2001/XMLSchema",
+    "+@xmlns": "http://www.chipside.com/",
+    "Locations": {
+      "Location": [
+        {
+          "ID": "310",
+          "Name": "Albion Street Car Park, Hull",
+          "Code": "600200"
+        },
+        {
+          "ID": "5863",
+          "Name": "Bourne Street Area, Hull",
+          "Code": "600150"
+        },
+        {
+          "ID": "316",
+          "Name": "Francis Street Car Park, Hull",
+          "Code": "600206"
+        },
+        {
+          "ID": "318",
+          "Name": "George Street Multi Storey Car Park, Hull",
+          "Code": "600208"
+        },
+        {
+          "ID": "311",
+          "Name": "History Centre Car Park, Hull",
+          "Code": "600201"
+        },
+        {
+          "ID": "312",
+          "Name": "Lowgate Car Park, Hull",
+          "Code": "600202"
+        },
+        {
+          "ID": "71056",
+          "Name": "Myton Street Car Park, Hull",
+          "Code": "600217"
+        },
+        {
+          "ID": "3204",
+          "Name": "On-Street Parking, Hull",
+          "Code": "600100"
+        },
+        {
+          "ID": "56584",
+          "Name": "Osborne Street Multi Storey Car Park, Hull",
+          "Code": "600215"
+        },
+        {
+          "ID": "1419",
+          "Name": "Pryme Street Multi, Hull",
+          "Code": "600212"
+        },
+        {
+          "ID": "6016",
+          "Name": "Tower Street Car Park, Hull",
+          "Code": "600214"
+        },
+        {
+          "ID": "5944",
+          "Name": "Trippett Street Car Park, Hull",
+          "Code": "600213"
+        }
+      ]
+    }
+  }
+}
