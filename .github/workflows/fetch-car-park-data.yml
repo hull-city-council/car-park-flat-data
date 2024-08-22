@@ -1,116 +1,116 @@
-name: Fetch car park data
-on:
-  push:
-    paths:
-      - .github/workflows/fetch-car-park-data.yml # Only run a new workflow every time this file (flat.yaml) file changes
-  workflow_dispatch: # Required even though this is currently empty
-  schedule:
-    - cron: '0 0 * * 1,4' # Runs every Monday and Thursday
-jobs:
-  scheduled:
-    runs-on: ubuntu-latest
-    steps: # This workflow has 3 steps
-      # The first step is to check out the repository so it can read the files inside of it and do other operations
-      - name: Check out repo
-        uses: actions/checkout@v3
-      # This step installs Deno, which is a new Javascript runtime that improves on Node. We'll use it for postprocessing later
-      - name: Setup deno
-        uses: denoland/setup-deno@main
-        with:
-          deno-version: v1.x
-      # Get 310
-      - name: Fetch 310 data
-        uses: githubocto/flat@mr/node16
-        with:
-          http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
-          mask: true
-          downloaded_filename: mi_permit_car_park_data_310.json # The http_url gets saved and renamed in our repository
-          axios_config: ./locations/310.json
-      # Get 311
-      - name: Fetch 311 data
-        uses: githubocto/flat@mr/node16
-        with:
-          http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
-          mask: true
-          downloaded_filename: mi_permit_car_park_data_311.json # The http_url gets saved and renamed in our repository
-          axios_config: ./locations/311.json
-     # Get 312
-      - name: Fetch 312 data
-        uses: githubocto/flat@mr/node16
-        with:
-          http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
-          mask: true
-          downloaded_filename: mi_permit_car_park_data_312.json # The http_url gets saved and renamed in our repository
-          axios_config: ./locations/312.json
-       # Get 316
-      - name: Fetch 316 data
-        uses: githubocto/flat@mr/node16
-        with:
-          http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
-          mask: true
-          downloaded_filename: mi_permit_car_park_data_316.json # The http_url gets saved and renamed in our repository
-          axios_config: ./locations/316.json
-       # Get 318
-      - name: Fetch 318 data
-        uses: githubocto/flat@mr/node16
-        with:
-          http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
-          mask: true
-          downloaded_filename: mi_permit_car_park_data_318.json # The http_url gets saved and renamed in our repository
-          axios_config: ./locations/318.json
-       # Get 3204
-      - name: Fetch 3204 data
-        uses: githubocto/flat@mr/node16
-        with:
-          http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
-          mask: true
-          downloaded_filename: mi_permit_car_park_data_3204.json # The http_url gets saved and renamed in our repository
-          axios_config: ./locations/3204.json
-      # Get 56584
-      - name: Fetch 56584 data
-        uses: githubocto/flat@mr/node16
-        with:
-          http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
-          mask: true
-          downloaded_filename: mi_permit_car_park_data_56584.json # The http_url gets saved and renamed in our repository
-          axios_config: ./locations/56584.json
-      # Get 5863
-      - name: Fetch 5863 data
-        uses: githubocto/flat@mr/node16
-        with:
-          http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
-          mask: true
-          downloaded_filename: mi_permit_car_park_data_5863.json # The http_url gets saved and renamed in our repository
-          axios_config: ./locations/5863.json
-      # Get 5944
-      - name: Fetch 5944 data
-        uses: githubocto/flat@mr/node16
-        with:
-          http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
-          mask: true
-          downloaded_filename: mi_permit_car_park_data_5944.json # The http_url gets saved and renamed in our repository
-          axios_config: ./locations/5944.json
-      # Get 6016
-      - name: Fetch 6016 data
-        uses: githubocto/flat@mr/node16
-        with:
-          http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
-          mask: true
-          downloaded_filename: mi_permit_car_park_data_6016.json # The http_url gets saved and renamed in our repository
-          axios_config: ./locations/6016.json
-      # Get 71056
-      - name: Fetch 71056 data
-        uses: githubocto/flat@mr/node16
-        with:
-          http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
-          mask: true
-          downloaded_filename: mi_permit_car_park_data_71056.json # The http_url gets saved and renamed in our repository
-          axios_config: ./locations/71056.json
-      # Get 1419
-      - name: Fetch 1419 data
-        uses: githubocto/flat@mr/node16
-        with:
-          http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
-          mask: true
-          downloaded_filename: mi_permit_car_park_data_1419.json # The http_url gets saved and renamed in our repository
-          axios_config: ./locations/1419.json
+# name: Fetch car park data
+# on:
+#   push:
+#     paths:
+#       - .github/workflows/fetch-car-park-data.yml # Only run a new workflow every time this file (flat.yaml) file changes
+#   workflow_dispatch: # Required even though this is currently empty
+#   schedule:
+#     - cron: '0 0 * * 1,4' # Runs every Monday and Thursday
+# jobs:
+#   scheduled:
+#     runs-on: ubuntu-latest
+#     steps: # This workflow has 3 steps
+#       # The first step is to check out the repository so it can read the files inside of it and do other operations
+#       - name: Check out repo
+#         uses: actions/checkout@v3
+#       # This step installs Deno, which is a new Javascript runtime that improves on Node. We'll use it for postprocessing later
+#       - name: Setup deno
+#         uses: denoland/setup-deno@main
+#         with:
+#           deno-version: v1.x
+#       # Get 310
+#       - name: Fetch 310 data
+#         uses: githubocto/flat@mr/node16
+#         with:
+#           http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
+#           mask: true
+#           downloaded_filename: mi_permit_car_park_data_310.json # The http_url gets saved and renamed in our repository
+#           axios_config: ./locations/310.json
+#       # Get 311
+#       - name: Fetch 311 data
+#         uses: githubocto/flat@mr/node16
+#         with:
+#           http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
+#           mask: true
+#           downloaded_filename: mi_permit_car_park_data_311.json # The http_url gets saved and renamed in our repository
+#           axios_config: ./locations/311.json
+#      # Get 312
+#       - name: Fetch 312 data
+#         uses: githubocto/flat@mr/node16
+#         with:
+#           http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
+#           mask: true
+#           downloaded_filename: mi_permit_car_park_data_312.json # The http_url gets saved and renamed in our repository
+#           axios_config: ./locations/312.json
+#        # Get 316
+#       - name: Fetch 316 data
+#         uses: githubocto/flat@mr/node16
+#         with:
+#           http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
+#           mask: true
+#           downloaded_filename: mi_permit_car_park_data_316.json # The http_url gets saved and renamed in our repository
+#           axios_config: ./locations/316.json
+#        # Get 318
+#       - name: Fetch 318 data
+#         uses: githubocto/flat@mr/node16
+#         with:
+#           http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
+#           mask: true
+#           downloaded_filename: mi_permit_car_park_data_318.json # The http_url gets saved and renamed in our repository
+#           axios_config: ./locations/318.json
+#        # Get 3204
+#       - name: Fetch 3204 data
+#         uses: githubocto/flat@mr/node16
+#         with:
+#           http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
+#           mask: true
+#           downloaded_filename: mi_permit_car_park_data_3204.json # The http_url gets saved and renamed in our repository
+#           axios_config: ./locations/3204.json
+#       # Get 56584
+#       - name: Fetch 56584 data
+#         uses: githubocto/flat@mr/node16
+#         with:
+#           http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
+#           mask: true
+#           downloaded_filename: mi_permit_car_park_data_56584.json # The http_url gets saved and renamed in our repository
+#           axios_config: ./locations/56584.json
+#       # Get 5863
+#       - name: Fetch 5863 data
+#         uses: githubocto/flat@mr/node16
+#         with:
+#           http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
+#           mask: true
+#           downloaded_filename: mi_permit_car_park_data_5863.json # The http_url gets saved and renamed in our repository
+#           axios_config: ./locations/5863.json
+#       # Get 5944
+#       - name: Fetch 5944 data
+#         uses: githubocto/flat@mr/node16
+#         with:
+#           http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
+#           mask: true
+#           downloaded_filename: mi_permit_car_park_data_5944.json # The http_url gets saved and renamed in our repository
+#           axios_config: ./locations/5944.json
+#       # Get 6016
+#       - name: Fetch 6016 data
+#         uses: githubocto/flat@mr/node16
+#         with:
+#           http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
+#           mask: true
+#           downloaded_filename: mi_permit_car_park_data_6016.json # The http_url gets saved and renamed in our repository
+#           axios_config: ./locations/6016.json
+#       # Get 71056
+#       - name: Fetch 71056 data
+#         uses: githubocto/flat@mr/node16
+#         with:
+#           http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
+#           mask: true
+#           downloaded_filename: mi_permit_car_park_data_71056.json # The http_url gets saved and renamed in our repository
+#           axios_config: ./locations/71056.json
+#       # Get 1419
+#       - name: Fetch 1419 data
+#         uses: githubocto/flat@mr/node16
+#         with:
+#           http_url: ${{ secrets.MIPERMIT_URL }} # The data to fetch
+#           mask: true
+#           downloaded_filename: mi_permit_car_park_data_1419.json # The http_url gets saved and renamed in our repository
+#           axios_config: ./locations/1419.json
